@@ -17,7 +17,7 @@ margin-top: 15px;
 .section1{
 width: 25%;
 float: left;
-height: 800px;
+height: 500px;
 margin-bottom: 200px;
 color: snow;
 margin: 0px 20px 0 0px;
@@ -26,10 +26,17 @@ background-color: #4e8165a9;
 
 .section1 p {
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     margin-left: 10px;
 }
+.section1 li{
+    font-family: cursive;
+    font-size: 11px;
+}
 .section2 img{
+    
+    border: 0.5px solid #5d210bb4;
+    border-radius: 0.8rem;
     display: block;
     width: 200px;
     height: 200px;
@@ -54,5 +61,5 @@ display: table;
 
 footer{
     padding: 50px;
-    background: #5d210bb4;
+    background: #491701c2;
 }
