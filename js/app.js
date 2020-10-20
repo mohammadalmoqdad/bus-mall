@@ -58,9 +58,7 @@ function render() {
         rightProduct = Product.all[randomNumber(0, Product.all.length - 1)]
     } while (leftProduct === rightProduct || leftProduct === middleProduct || middleProduct === rightProduct);
 
-    console.log(leftProduct);
-    console.log(middleProduct);
-    console.log(rightProduct);
+   
 
     leftImg.setAttribute('src', leftProduct.imgPath);
     leftImg.setAttribute('alt', leftProduct.pName);
@@ -80,8 +78,8 @@ function render() {
 render();
 
 
-var totalClicks = 0;
-
+var totalClicks=0;
+var totalClicks2=0; // make a variable for cummulative total clicks without affectiong on the condition
 var imgSection = document.querySelector('.section2');
 console.log(imgSection);
 imgSection.addEventListener('click', handleProductClick);
@@ -90,10 +88,11 @@ imgSection.addEventListener('click', handleProductClick);
 function handleProductClick(event) {
 
 
-    if (totalClicks < 25) {
+    if (totalClicks < 10) {
         if (event.target.id != imgSection) {
             totalClicks++;
-            console.log(totalClicks);
+            totalClicks2++;
+            
             
             rightProduct.veiws++;
             leftProduct.veiws++;
@@ -114,14 +113,17 @@ function handleProductClick(event) {
                
             }
             render();
+            
+            
 
 
 
 
         }
-    } else if (totalClicks == 25) {
-        chartPaint();
+    } if (totalClicks == 10) {
+        sendClicks();
         renderResults();
+        chartPaint();
        
 
 
@@ -132,8 +134,9 @@ function handleProductClick(event) {
 }
 
 function renderResults() {
+    imgSection.removeEventListener('click', handleProductClick);
+    
     var ulE1 = document.getElementById('finalResults');
-
     for (var i = 0; i < Product.all.length; i++) {
         var liE = document.createElement('li');
         ulE1.appendChild(liE);
@@ -142,7 +145,6 @@ function renderResults() {
     }
     console.log(ulE1);
 
-    imgSection.removeEventListener('click', handleProductClick);
 
 
 }
