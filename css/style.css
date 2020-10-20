@@ -1,52 +1,75 @@
 header nav{
+   
+    position: fixed;
+    top: 0px;
     height: 80px;
-    color: rgba(71,148,143,0.8);
-    border: 1px solid rgba(71,148,143,0.2);
+    width: 100%;
+    color: rgba(0,0,0,0.9);
+    border: 1px solid rgba(71,148,143,0.2); 
+    background: linear-gradient(-170deg, #000 33%, rgba(0, 0, 0, 0) 33%), -webkit-linear-gradient(110deg, #dd0000 66%, #ffc608 66%);
+    z-index: 2;
+    
+}
+
+main{
+    margin-top: 82px;
 }
 header nav img{
 float: left;
-margin-left: 100px;
+margin-left: 70px;
 margin-top: 15px;
 }
 header nav h1{
     display: inline-block;
-margin-left:70px;
+margin-left:50px;
 margin-top: 15px;
-
+font-family: cursive;
 }
 .section1{
+
 width: 25%;
 float: left;
 height: 500px;
 margin-bottom: 200px;
 color: snow;
 margin: 0px 20px 0 0px;
-background-color: #4e8165a9;
+background: linear-gradient(-170deg, rgba(0, 0, 0, 1) 33%, rgba(0, 0, 0, 0) 33%), -webkit-linear-gradient(-50deg, #dd0000e7 66%, #ffc608 33%);
 }
 
 .section1 p {
     font-family: sans-serif;
-    font-size: 15px;
-    margin-left: 10px;
+    font-size: 24px;
+    margin-left: 22px;
+    font-family: cursive;
 }
 .section1 li{
     font-family: cursive;
-    font-size: 11px;
+    font-size: 15px;
 }
 .section2 img{
     
     border: 0.5px solid #5d210bb4;
     border-radius: 0.8rem;
     display: block;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     padding: 15px;
+    margin: 0px;
 }
 .section2 ul{
     text-align: center;
+    padding-right: 40px;
 }
 .section2 li{
     display: inline-block;
+}
+.images{
+    position: relative;
+    top: 80px;
+    
+    
+    float: right;
+    
 }
 .section3{
   margin-left: 20x;
@@ -61,5 +84,6 @@ display: table;
 
 footer{
     padding: 50px;
-    background: #491701c2;
+    
+    background: linear-gradient(-7deg, #ffc608 44%, rgba(0, 0, 0, 0) 33%), -webkit-linear-gradient(-100deg, #dd0000 55%, rgba(0, 0, 0, 0.9) 55%);
 }
