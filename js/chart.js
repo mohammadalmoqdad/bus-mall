@@ -1,8 +1,3 @@
-console.log(Product.all[0].clicks)
-console.log(2222222222222222222222);
-
-
-
 function chartPaint(){
     var clickArr=[];
     var veiwArr=[];
@@ -11,7 +6,7 @@ clickArr.push(Product.all[i].clicks);
 veiwArr.push(Product.all[i].veiws);
 }
 // push product.all.clicks
-console.log(clickArr);
+
 var chartContainer=document.getElementById('myChart');
 var myChart=new Chart(chartContainer,{
     type: 'bar', //pie, line
