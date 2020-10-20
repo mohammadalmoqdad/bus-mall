@@ -14,7 +14,7 @@ var imgNames = [
     "boots.jpg",
     "tauntaun.jpg",
     "unicorn.jpg",
-    "unicorn.jpg",
+    "bathroom.jpg",
     "usb.gif",
     "water-can.jpg",
     "breakfast.jpg"
@@ -94,21 +94,24 @@ function handleProductClick(event) {
         if (event.target.id != imgSection) {
             totalClicks++;
             console.log(totalClicks);
-            rightProduct.views++;
-            leftProduct.views++;
-            middleProduct.views++;
+            
+            rightProduct.veiws++;
+            leftProduct.veiws++;
+            middleProduct.veiws++;
 
             if (event.target.id === 'img1') {
                 leftProduct.clicks++;
+                
 
             }
             if (event.target.id === 'img2') {
                 middleProduct.clicks++;
+               
 
             }
             if (event.target.id === 'img3') {
                 rightProduct.clicks++;
-
+               
             }
             render();
 
@@ -117,8 +120,9 @@ function handleProductClick(event) {
 
         }
     } else if (totalClicks == 25) {
+        chartPaint();
         renderResults();
-
+       
 
 
 
@@ -133,7 +137,8 @@ function renderResults() {
     for (var i = 0; i < Product.all.length; i++) {
         var liE = document.createElement('li');
         ulE1.appendChild(liE);
-        liE.textContent = `${Product.all[i].pName} has ${Product.all[i].clicks} clicks and ${Product.all[i].views} views`;
+        liE.textContent = `${Product.all[i].pName} has ${Product.all[i].clicks} clicks and ${Product.all[i].veiws} views`;
+       
     }
     console.log(ulE1);
 
