@@ -87,3 +87,15 @@ footer{
     
     background: linear-gradient(-7deg, #ffc608 44%, rgba(0, 0, 0, 0) 33%), -webkit-linear-gradient(-100deg, #dd0000 55%, rgba(0, 0, 0, 0.9) 55%);
 }
+
+
+.showResult{
+    display: block;
+    width: 50%;
+    padding: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 0 auto;
+    font-size: 18px;
+border-radius: 1rem;
+}
