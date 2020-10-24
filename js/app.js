@@ -84,7 +84,12 @@ var imgSection = document.querySelector('.section2');
 console.log(imgSection);
 imgSection.addEventListener('click', handleProductClick);
 
-
+var showResult=document.querySelector(".showResult");
+function show(){
+    sendClicks();
+    renderResults();
+    chartPaint();
+}
 function handleProductClick(event) {
 
 
@@ -121,9 +126,8 @@ function handleProductClick(event) {
 
         }
     } if (totalClicks == 10) {
-        sendClicks();
-        renderResults();
-        chartPaint();
+        showResult.addEventListener('click',show);
+       
        
 
 
